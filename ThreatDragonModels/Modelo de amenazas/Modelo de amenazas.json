@@ -1774,9 +1774,18 @@
             }
           }
         ]
+      },
+      {
+        "id": 2,
+        "title": "Diagrama inicio de sesión sitio web biblioteca",
+        "diagramType": "STRIDE",
+        "placeholder": "Descripción de nuevo diagrama STRIDE",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.3.0",
+        "cells": []
       }
     ],
-    "diagramTop": 2,
+    "diagramTop": 3,
     "reviewer": "",
     "threatTop": 15
   }
