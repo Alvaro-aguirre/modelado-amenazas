@@ -19,7 +19,7 @@
         "cells": [
           {
             "position": {
-              "x": -1930,
+              "x": -1950,
               "y": -2590
             },
             "size": {
@@ -131,6 +131,13 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -251,8 +258,8 @@
           },
           {
             "position": {
-              "x": -1760,
-              "y": -2430
+              "x": -1750,
+              "y": -2306
             },
             "size": {
               "width": 160,
@@ -371,7 +378,7 @@
           {
             "position": {
               "x": -1933.75,
-              "y": -2256
+              "y": -2040
             },
             "size": {
               "width": 120,
@@ -493,8 +500,8 @@
           },
           {
             "position": {
-              "x": -1544.75,
-              "y": -2256
+              "x": -1510,
+              "y": -2040
             },
             "size": {
               "width": 120,
@@ -633,7 +640,7 @@
                 ],
                 "attrs": {
                   "labelText": {
-                    "text": "Trust Boundary",
+                    "text": "Usuario/Web\nserver límite",
                     "textAnchor": "middle",
                     "textVerticalAnchor": "middle"
                   },
@@ -657,7 +664,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Trust Boundary",
+              "name": "Usuario/Web\nserver límite",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
@@ -683,9 +690,173 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "Web Response",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": {
+                  "distance": 0.5,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
+              }
+            ],
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "914d27e7-a0e4-4865-87b3-1a5ad06d69e5",
+            "source": {
+              "cell": "3160a831-b8d2-45ab-838c-8458ee14bbbf",
+              "port": "b4d10fa2-dde3-45df-9a84-6d83d210f495"
+            },
+            "target": {
+              "cell": "b750d0f7-68a6-4cbc-a9ba-e06f5246625a",
+              "port": "02dd2c6a-0269-4c44-99b1-ec906d8cb45e"
+            },
+            "vertices": [
+              {
+                "x": -1750,
+                "y": -2420
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "Web Response",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": {
+                  "distance": 0.5,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
+              }
+            ],
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "3400817c-3b8b-4b75-a32d-b8d93d71b6f2",
+            "source": {
+              "cell": "b750d0f7-68a6-4cbc-a9ba-e06f5246625a",
+              "port": "503b18f8-0c3d-404d-a10b-a9b6399e9a65"
+            },
+            "target": {
+              "cell": "3160a831-b8d2-45ab-838c-8458ee14bbbf",
+              "port": "82dd6f55-68f5-4226-986d-3b67fedaba08"
+            },
+            "vertices": [
+              {
+                "x": -1970,
+                "y": -2420
+              }
+            ]
+          },
+          {
             "position": {
-              "x": -1330,
-              "y": -2360
+              "x": -1300,
+              "y": -2230
             },
             "size": {
               "width": 120,
@@ -803,13 +974,6 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           }
         ]
